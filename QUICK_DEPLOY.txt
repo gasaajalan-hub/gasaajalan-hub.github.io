@@ -1,0 +1,32 @@
+═══════════════════════════════════════════════════════
+🚀 QUICK DEPLOY - Jalankan Command Ini Di Terminal:
+═══════════════════════════════════════════════════════
+
+1. Commit perubahan:
+   
+   git add .
+   git commit -m "Fix blank page with HashRouter"
+   git push origin main
+
+
+2. Deploy ke GitHub Pages:
+   
+   npm run deploy
+
+
+3. Tunggu 5 menit, lalu buka:
+   
+   https://gasaajalan-hub.github.io/
+
+
+4. Clear cache browser:
+   
+   Ctrl + Shift + R (Windows)
+   Cmd + Shift + R (Mac)
+
+
+═══════════════════════════════════════════════════════
+✅ Selesai! Website akan muncul tanpa blank page!
+═══════════════════════════════════════════════════════
+
+Panduan lengkap: Buka file FIX_BLANK_PAGE.md
