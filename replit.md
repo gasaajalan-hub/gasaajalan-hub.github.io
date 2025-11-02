@@ -52,11 +52,13 @@ The application will be available at http://localhost:5000
 - `npm run lint` - Run ESLint
 
 ## Recent Changes
-- **2025-11-02**: Migrated from Lovable to Replit
+- **2025-11-02**: Migrated from Lovable to Replit and configured for GitHub Pages
   - Configured Vite for GitHub Pages with root directory base path (`base: "/"`)
   - Updated server configuration to use port 5000 and host 0.0.0.0
+  - **Changed from BrowserRouter to HashRouter** to fix blank page issue on GitHub Pages
+    - HashRouter is required for GitHub Pages static hosting
+    - URLs will use hash format (e.g., `/#/research` instead of `/research`)
   - Added React Router future flags for v7 compatibility
-  - Added `basename={import.meta.env.BASE_URL}` to BrowserRouter for GitHub Pages compatibility
   - Installed all npm dependencies
   - Added gh-pages package for easy deployment
   - Created `.nojekyll` file in public folder for GitHub Pages

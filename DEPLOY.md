@@ -2,7 +2,16 @@
 
 ## Konfigurasi untuk gasaajalan-hub.github.io
 
-Proyek ini sudah dikonfigurasi untuk deploy ke GitHub Pages di direktori root (`/`).
+Proyek ini sudah dikonfigurasi untuk deploy ke GitHub Pages di direktori root (`/`) dengan **HashRouter** untuk mengatasi masalah blank page.
+
+### ⚠️ Penting: HashRouter vs BrowserRouter
+
+Proyek ini menggunakan **HashRouter** (bukan BrowserRouter) karena:
+- ✅ GitHub Pages tidak support client-side routing BrowserRouter
+- ✅ HashRouter lebih reliable untuk GitHub Pages
+- ✅ Tidak ada masalah 404 atau blank page
+
+**Catatan:** URL akan memiliki tanda `#` (contoh: `https://gasaajalan-hub.github.io/#/research`)
 
 ### Langkah Deploy:
 
@@ -50,17 +59,23 @@ Proyek ini sudah dikonfigurasi untuk deploy ke GitHub Pages di direktori root (`
 
 ### Troubleshooting:
 
+**✅ MASALAH BLANK PAGE SUDAH DIPERBAIKI**
+
+Aplikasi sekarang menggunakan **HashRouter** yang 100% kompatibel dengan GitHub Pages. Masalah blank page seharusnya tidak akan muncul lagi.
+
 **Jika halaman masih blank setelah deploy:**
 
-1. Cek browser console untuk error (F12 → Console)
-2. Pastikan GitHub Pages sudah aktif di Settings
-3. Tunggu 5-10 menit untuk propagasi
-4. Hard refresh: Ctrl+Shift+R (Windows/Linux) atau Cmd+Shift+R (Mac)
+1. **Clear browser cache:** Ctrl+Shift+Del (Windows/Linux) atau Cmd+Shift+Del (Mac)
+2. **Hard refresh:** Ctrl+Shift+R (Windows/Linux) atau Cmd+Shift+R (Mac)
+3. **Cek URL:** Pastikan mengakses `https://gasaajalan-hub.github.io/` atau `https://gasaajalan-hub.github.io/#/`
+4. **Cek browser console:** F12 → Console untuk melihat error
+5. **Tunggu deployment:** Tunggu 5-10 menit setelah deploy
 
 **Jika ada error 404:**
 
 1. Pastikan branch `gh-pages` sudah dibuat (otomatis oleh `npm run deploy`)
 2. Pastikan Settings → Pages source sudah di-set ke `gh-pages` branch
+3. Pastikan file sudah ter-upload ke branch `gh-pages`
 
 ### Build Manual (Opsional):
 
